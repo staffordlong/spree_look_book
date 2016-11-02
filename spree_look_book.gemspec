@@ -3,13 +3,13 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_look_book'
   s.version     = '3.1.1'
-  s.summary     = 'TODO: Add gem summary here'
-  s.description = 'TODO: Add (optional) gem description here'
+  s.summary     = 'Spree Look Book for creating a look from a group of different products.'
+  s.description = ' A lookbook can be described as "fashion diaries" because fashion bloggers are constantly updating them on a daily or weekly basis. This gives customers/viewers ideas on how to style outfits, or to show what the latest fashions are. Lookbooks can be created from admin interface by adding a group of different products(For example: A shirt, pants, shoes, and so on..), with images.'
   s.required_ruby_version = '>= 2.1.0'
 
-  # s.author    = 'You'
-  # s.email     = 'you@example.com'
-  # s.homepage  = 'http://www.spreecommerce.com'
+  s.author    = 'Andrew Scott'
+  s.email     = 'amscott@openmailbox.org'
+  s.homepage  = 'https://github.com/askl56'
   s.license = 'BSD-3'
 
   # s.files       = `git ls-files`.split("\n")
