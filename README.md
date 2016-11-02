@@ -1,13 +1,13 @@
-SpreeLookBook
+Spree Look Book
 =============
 
-Introduction goes here.
+ A lookbook can be described as "fashion diaries" because fashion bloggers are constantly updating them on a daily or weekly basis. This gives customers/viewers ideas on how to style outfits, or to show what the latest fashions are. Lookbooks can be created from admin interface by adding a group of different products(For example: A shirt, pants, shoes, and so on..), with images.
 
 ## Installation
 
 1. Add this extension to your Gemfile with this line:
   ```ruby
-  gem 'spree_look_book', github: '[your-github-handle]/spree_look_book', branch: 'X-X-stable'
+  gem 'spree_look_book', github: 'askl56/spree_look_book', branch: 'X-X-stable'
   ```
 
   The `branch` option is important: it must match the version of Spree you're using.
@@ -50,4 +50,4 @@ If you'd like to contribute, please take a look at the
 [instructions](CONTRIBUTING.md) for installing dependencies and crafting a good
 pull request.
 
-Copyright (c) 2016 [name of extension creator], released under the New BSD License
+Copyright (c) 2016 Andrew Scott, released under the New BSD License
