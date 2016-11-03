@@ -2,4 +2,24 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  spree:
+    active: Active
+    alt_text: Alt Text
+    autumn_winter_16_17: Autumn Winter 16/17
+    back_to_look_book_list: Back to Look Book list
+    editing_look_book: Editing Look Book
+    editing_look_book_image: Editing Look Book Image
+    look_book: Look Book
+    look_books: Look Books
+    look_book_list: Look Book List
+    look_book_image: Look Book Image
+    look_book_image_settings: Look Book Image Settings
+    look_book_images: Look Book Images
+    look_book_settings: Look Book Settings
+    new_look_book: New Look Book
+    new_look_book_image: New Look Book Image
+    no_look_book_images_found: No Look Book Images Found
+    product_name: Product Name
+    slug: Slug
+    title: Title
+
