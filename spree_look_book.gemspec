@@ -1,4 +1,7 @@
-# encoding: UTF-8
+# coding: utf-8
+lib = File.expand_path('../lib/', __FILE__)
+$LOAD_PATH.unshift lib unless $LOAD_PATH.include?(lib)
+
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_look_book'
@@ -12,12 +15,14 @@ Gem::Specification.new do |s|
   s.homepage  = 'https://github.com/askl56'
   s.license = 'BSD-3'
 
-  # s.files       = `git ls-files`.split("\n")
-  # s.test_files  = `git ls-files -- {test,spec,features}/*`.split("\n")
+  s.files       = `git ls-files`.split("\n")
+  s.test_files  = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.require_path = 'lib'
   s.requirements << 'none'
 
-  s.add_dependency 'spree_core', '~> 3.1.1'
+  s.add_dependency 'spree_core', '~> 3.1.1'  
+  s.add_runtime_dependency 'spree_backend', '3.1.1'
+
 
   s.add_development_dependency 'capybara', '~> 2.6'
   s.add_development_dependency 'coffee-rails'

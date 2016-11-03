@@ -7,7 +7,7 @@ Spree Look Book
 
 1. Add this extension to your Gemfile with this line:
   ```ruby
-  gem 'spree_look_book', github: 'askl56/spree_look_book', branch: 'X-X-stable'
+  gem 'spree_look_book', github: 'askl56/spree_look_book', branch: '3-1-stable'
   ```
 
   The `branch` option is important: it must match the version of Spree you're using.
