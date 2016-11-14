@@ -10,7 +10,8 @@ Spree::Core::Engine.routes.draw do
         end
       end
     end
-
+  end
+  
   scope 'look-books' do
     get '/:slug', to: 'look_books#show',  as: :look_book
   end
