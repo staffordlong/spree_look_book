@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.name        = 'spree_look_book'
   s.version     = '3.1.1'
   s.summary     = 'Spree Look Book for creating a look from a group of different products.'
-  s.description = ' A lookbook can be described as "fashion diaries" because fashion bloggers are constantly updating them on a daily or weekly basis. This gives customers/viewers ideas on how to style outfits, or to show what the latest fashions are. Lookbooks can be created from admin interface by adding a group of different products(For example: A shirt, pants, shoes, and so on..), with images.'
+  s.description = 'A lookbook can be described as "fashion diaries" because fashion bloggers are constantly updating them on a daily or weekly basis. This gives customers/viewers ideas on how to style outfits, or to show what the latest fashions are. Lookbooks can be created from admin interface by adding a group of different products(For example: A shirt, pants, shoes, and so on..), with images.'
   s.required_ruby_version = '>= 2.1.0'
 
   s.author    = 'Andrew Scott'
