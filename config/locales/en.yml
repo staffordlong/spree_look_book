@@ -7,7 +7,13 @@ en:
       spree/look_book:
         one: "Look Book"
         other: "Look Books"
-        
+      spree/look_book_items:
+        one: "Look Book Item"
+        other: "Look Book Items"
+      spree/look_book_products:
+        one: "Look Book Product"
+        other: "Look Book Products"
+
   spree:
     active: Active
     alt_text: Alt Text
