@@ -1,4 +1,4 @@
-Spree::Core::Engine.add_routes do
+Spree::Core::Engine.routes.draw do
   namespace :admin do
     resources :look_books do
       resources :look_book_images, only: %i(index create destroy new edit update) do
