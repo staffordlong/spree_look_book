@@ -1,0 +1,22 @@
+<div data-hook="admin_image_form_fields" class="row">
+  <div class="col-md-6">
+    <%= f.field_container :attachment, class: ['form-group'] do %>
+      <%= f.label :attachment, Spree.t(:filename) %>
+      <%= f.file_field :attachment %>
+    <% end %>
+
+    <%= f.field_container :product, class: ['form-group'] do %>
+      <% f.fields_for :look_book_image_products do |ff| %>
+        <%= render partial: "look_book_image_product_fields", locals: { f: ff } %>
+         <div class="cocoon-links">
+          <%= link_to_add_association 'Add another product', f, :look_book_image_products, class: 'btn btn-success', data: cocoon_data_options %>
+        </div>
+      <% end %>
+    <% end %>
+
+    <%= f.field_container :alt_text, class: ['form-group'] do %>
+      <%= f.label :alt_text, Spree.t(:alt_text) %>
+      <%= f.text_field :alt_text, class: 'form-control' %>
+    <% end %>
+  </div>
+</div>

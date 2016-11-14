@@ -1,0 +1,31 @@
+<table class="table sortable" data-hook="images_table" data-sortable-link="<%= update_positions_admin_look_book_look_book_image_look_book_image_products_path(look_book_id: look_book_image.look_book, look_book_image_id: look_book_image) %>">
+  <thead>
+    <tr data-hook="images_header">
+      <th></th>
+      <th>
+        <%= Spree.t(:product_name) %>
+      </th>
+      <th>
+        <%= Spree.t(:slug) %>
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% (look_book_image.look_book_image_products).each do |product| %>
+      <tr id="<%= spree_dom_id product %>" data-hook="images_row">
+        <td class="move-handle text-center">
+        <% if can? :edit, product %>
+            <span class="icon icon-move handle"></span>
+          <% end %>
+        </td>
+        <td class="product">
+          <%= product.name %>
+        </td>
+        <td>
+          <%= product.slug %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

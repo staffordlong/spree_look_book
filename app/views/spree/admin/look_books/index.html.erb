@@ -1,0 +1,31 @@
+<% content_for :page_title do %>
+  <%= Spree.t(:look_books) %>
+<% end %>
+
+<% content_for :page_actions do %>
+  <%= button_link_to Spree.t(:new_look_book), new_admin_look_book_path, class: "btn-success", icon: 'add', id: 'new-look-book-path'%>
+<% end %>
+
+<table class="table" id="listing_users" data-hook>
+  <thead>
+  <th>Title</th>
+  <th>Slug</th>
+  <th>Active?</th>
+  </thead>
+  <tbody>
+    <% @look_books.each do |look_book|%>
+      <tr id="<%= spree_dom_id look_book %>" data-hook="admin_users_index_rows">
+        <td class='look_book_title'>
+        <%= link_to look_book.title, edit_admin_look_book_url(look_book) %>
+        </td>
+
+        <td><%= look_book.slug %></td>
+        <td><%= look_book.is_active? %></td>
+        <td data-hook="admin_users_index_row_actions" class="actions actions-2 text-right">
+          <%= link_to_edit look_book, no_text: true %>
+          <%= link_to_delete look_book, no_text: true %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

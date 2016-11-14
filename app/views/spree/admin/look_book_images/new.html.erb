@@ -1,0 +1,15 @@
+<%= render partial: 'spree/admin/shared/error_messages', locals: { target: @look_book_image } %>
+
+<% content_for :page_title do %>
+  <%= Spree.t(:look_book_image) %>
+<% end %>
+
+<%= simple_form_for [:admin, @look_book, @look_book_image], html: { multipart: true } do |f| %>
+  <fieldset data-hook="new_image">
+    <%= render partial: 'form', locals: { f: f } %>
+
+    <div data-hook="admin_user_new_form_buttons">
+      <%= render partial: 'spree/admin/shared/new_resource_links', locals: { collection_url: spree.admin_look_book_look_book_images_url }  %>
+    </div>
+  </fieldset>
+<% end %>

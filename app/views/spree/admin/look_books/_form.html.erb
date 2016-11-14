@@ -1,0 +1,21 @@
+<div data-hook="admin_user_form_fields" class="row">
+  <div class="col-md-6">
+    <%= f.field_container :title, class: ['form-group'] do %>
+      <%= f.label :title, Spree.t(:title) %>
+      <%= f.text_field :title, class: 'form-control' %>
+      <%= error_message_on :look_book, :title %>
+    <% end %>
+
+    <%= f.field_container :slug, class: ['form-group'] do %>
+      <%= f.label :slug, Spree.t(:slug) %>
+      <%= f.text_field :slug, class: 'form-control' %>
+      <%= error_message_on :look_book, :slug %>
+    <% end %>
+
+    <%= f.field_container :active, class: ['form-group'] do %>
+      <%= f.label :active, Spree.t(:active) %>
+      <%= f.check_box :active, class: 'form-control' %>
+      <%= error_message_on :look_book, :slug %>
+    <% end %>
+  </div>
+</div>

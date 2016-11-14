@@ -1,0 +1,40 @@
+<% content_for :page_title do %>
+  <%= Spree.t(:editing_look_book) %>
+<% end %>
+
+<% content_for :page_actions do %>
+  <%= button_link_to Spree.t(:new_look_book), new_object_url, { class: "btn-success", icon: 'add', id: 'admin_new_look_book' } %>
+  <%= back_to_list_button(Spree.t(:look_book), admin_look_books_path) %>
+<% end %>
+
+<%= render partial: 'spree/admin/shared/error_messages', locals: { target: @look_book } %>
+
+<div data-hook="admin_look_book_edit_general_settings" class="panel panel-default">
+  <div class="panel-heading">
+    <h1 class="panel-title">
+      <%= Spree.t(:look_book_settings) %>
+    </h1>
+  </div>
+
+  <div class="panel-body">
+    <div data-hook="admin_look_book_edit_form_header">
+      <%= render partial: 'spree/admin/shared/error_messages', locals: { target: @look_book } %>
+    </div>
+
+    <div data-hook="admin_look_book_edit_form">
+      <%= simple_form_for [:admin, @look_book], as: :look_book, url: spree.admin_look_book_path(@look_book), method: :put do |f| %>
+
+        <%= render partial: 'form', locals: { f: f } %>
+
+        <div data-hook="admin_look_book_edit_form_button">
+          <%= render partial: 'spree/admin/shared/edit_resource_links', locals: { collection_url: spree.admin_look_books_url } %>
+        </div>
+
+        <br />
+
+        <%= render partial: 'look_books_sidebar' %>
+      <% end %>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,48 @@
+<% content_for :page_title do %>
+  <%= Spree.t(:editing_look_book_image) %>
+<% end %>
+
+<% content_for :page_actions do %>
+  <%= button_link_to Spree.t(:new_look_book_image), new_admin_look_book_look_book_image_path, { class: "btn-success", icon: 'add', id: 'admin_new_look_book' } %>
+  <%= back_to_list_button(Spree.t(:look_book_image), admin_look_book_look_book_images_path) %>
+<% end %>
+
+<%= render partial: 'spree/admin/shared/error_messages', locals: { target: @look_book_image } %>
+
+<%= form_for [:admin, @look_book, @look_book_image], html: { multipart: true } do |f| %>
+  <div data-hook="edit_image" class="panel panel-default">
+    <div class="panel-heading">
+      <h1 class="panel-title">
+        <%= @look_book_image.attachment_file_name%>
+      </h1>
+    </div>
+    <div class="panel-body">
+      <div class="form-group">
+        <div data-hook="thumbnail" class="col-md-3 text-center">
+          <%= f.label Spree.t(:thumbnail) %>
+          <%= link_to image_tag(@look_book_image.attachment.url(:small)), @look_book_image.attachment.url(:product) %>
+        </div>
+        <div class="col-md-9">
+        <%= simple_form_for [:admin, @look_book, @look_book_image], html: { multipart: true } do |f| %>
+          <%= render partial: 'edit_form', locals: { f: f } %>
+          <% end %>
+        </div>
+          <%= render partial: 'edit_associated_products',
+          locals: {
+            look_book_image: @look_book_image,
+            collection_url: spree.admin_look_book_look_book_image_url
+            }
+          %>
+
+           <div data-hook="admin_look_book_image_edit_form_button">
+            <%= render partial: 'spree/admin/shared/edit_resource_links',
+            locals: {
+              collection_url: spree.admin_look_book_look_book_image_url
+              }
+            %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
