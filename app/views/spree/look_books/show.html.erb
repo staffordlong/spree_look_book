@@ -1,0 +1,36 @@
+<article>
+  <div class="c-look-book">
+    <div class="c-look-book__title">
+      <%= @look_book.title %>
+    </div>
+  </div>
+
+  <% if @look_book.look_book_images.none? %>
+   <div class="c-look-book-images__no_images">
+     <%= Spree.t(:no_look_book_images_found) %>
+   </div>
+  <% else %>
+  <% @look_book.look_book_images.each_with_index do |image, index| %>
+    <div class="row">
+      <section class="col-md-7 <%= 'col-md-push-5' if index.odd? %>">
+        <%= image_tag image.attachment.url(:large), itemprop: "image", alt: "#{image.alt_text}", class: 'img-responsive c-look-book__image'  %>
+      </section>
+      <section class="col-md-5 <%= 'col-md-pull-7' if index.odd? %>">
+        <div class="c-look-book__item">
+          <% image.spree_products.each do |product| %>
+            <div class="c-look-book__item__product">
+              <h2 class="c-look-book__item__product__name"><%= product.name %></h2>
+              <p class="c-look-book__item__product__short-description"><%= product.short_description %></p>
+              <div class="c-look-book__item__product__buy-now">
+                <%= link_to spree.product_path(product), itemprop: "url" do %>
+                  <strong><%= "+ #{Spree.t(:buy_now)}" %></strong>
+                <% end %>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </section>
+    </div>
+    <% end %>
+  <% end %>
+</article>
