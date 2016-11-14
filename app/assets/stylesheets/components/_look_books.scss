@@ -1,0 +1,60 @@
+.c-look-book {
+  text-align: center;
+}
+
+  .c-look-book__image {}
+
+  .c-look-book__title {
+    @extend .u-stylized;
+  }
+
+  .c-look-book__item {
+    padding: 0 1em;
+
+    @media (min-width: $screen-sm-min) {
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: column wrap;
+    }
+
+    @media (min-width: $screen-md-min) {
+      margin-top: 33%;
+    }
+  }
+
+  .c-look-book__item__product {
+    width: 200px;
+    @media (min-width: $screen-md-min) {
+      width: 50%;
+    }
+  }
+
+    .c-look-book__item__product__name {
+      font-family: $font-family-bold;
+      font-weight: 700;
+      font-size: 1.286em;
+      text-transform: uppercase;
+
+      @media (min-width: $screen-md-min) {
+        margin: 0;
+      }
+    }
+
+    .c-look-book__item__product__short-description {
+      font-size: 1em;
+      padding: 0;
+      margin: 0;
+      font-size: 15px;
+
+      @media ($screen-lg-min) {
+        padding: 0 3em;
+      }
+    }
+
+    .c-look-book__item__product__buy-now {
+      display: inline-block;
+      padding: 5px 0 20px;
+    }
+
