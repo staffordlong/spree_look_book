@@ -5,12 +5,18 @@ module Spree
 
     def index
       @look_books = Spree::LookBook.active
-      respond_with(@lookbooks)
+      respond_with(@look_books)
     end
 
     def show
-      @look_book = Spree::LookBook.find_by!(slug: params[:slug])
-      respond_with(@lookbook)
+      @look_book = Spree::LookBook.active.find_by(slug: params[:slug]) or not_found
+      respond_with(@look_book)
+    end
+
+    private
+
+    def not_found
+      raise ActionController::RoutingError.new(Spree.t(:lookbook_not_found))
     end
   end
 end
