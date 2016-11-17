@@ -23,6 +23,9 @@
 
 module Spree
   class LookBookImageProduct < ActiveRecord::Base
+
+    default_scope { order("#{self.table_name}.position") }
+
     def self.table_name
       'look_book_image_products'
     end
