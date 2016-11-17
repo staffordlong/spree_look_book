@@ -3,5 +3,6 @@
     <%= f.label :spree_product, class: 'sr-only' %>
     <%= f.association :spree_product, collection: Spree::Product.order("LOWER(name)").for_select, as: :select, item_wrapper_class: 'form-control input-sm', allow_blank: false %>
   </div>
+  
   <%= link_to_remove_association "Remove", f, class: 'btn btn-danger btn-sm', data: cocoon_data_options %>
 </div>
