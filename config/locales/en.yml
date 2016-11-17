@@ -16,6 +16,7 @@ en:
 
   spree:
     active: Active
+    active?: Active?
     alt_text: Alt Text
     autumn_winter_16_17: Autumn Winter 16/17
     back_to_look_book_list: Back to Look Book list
