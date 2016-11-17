@@ -15,9 +15,7 @@
     <% (look_book_image.look_book_image_products).each do |product| %>
       <tr id="<%= spree_dom_id product %>" data-hook="images_row">
         <td class="move-handle text-center">
-        <% if can? :edit, product %>
-            <span class="icon icon-move handle"></span>
-          <% end %>
+          <span class="icon icon-move handle"></span>
         </td>
         <td class="product">
           <%= product.name %>
