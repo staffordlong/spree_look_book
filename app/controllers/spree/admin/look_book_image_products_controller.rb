@@ -5,7 +5,7 @@ module Spree
       def update_positions
         ActiveRecord::Base.transaction do
           params[:positions].each do |id, index|
-            model_class.find(id).set_list_position(index)
+            model_class.find(id).insert_at(index)
           end
         end
 
