@@ -17,5 +17,11 @@
       <%= f.check_box :active, class: 'form-control' %>
       <%= error_message_on :look_book, :slug %>
     <% end %>
+
+    <%= f.field_container :text_shown, class: ['form-group'] do %>
+      <%= f.label :text_shown, Spree.t(:text_shown) %>
+      <%= f.check_box :text_shown, class: 'form-control' %>
+      <%= error_message_on :look_book, :slug %>
+    <% end %>
   </div>
 </div>
