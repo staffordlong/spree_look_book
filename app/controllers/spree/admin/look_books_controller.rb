@@ -62,7 +62,7 @@ module Spree
       end
 
       def look_book_params
-        params.require(:look_book).permit(:title, :slug, :active)
+        params.require(:look_book).permit(:title, :slug, :active, :text_shown)
       end
     end
   end
